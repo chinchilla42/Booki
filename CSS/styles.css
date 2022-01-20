@@ -1,8 +1,29 @@
 /******general******/
+*{
+    margin: 0px;
+    padding: 0;
+}
 
 body{
-    box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
+}
+
+#container{
+    margin: auto;
+    max-width: 952px;
+}
+
+header, nav ul, #searchbar, #location, #filters, #filterList, .cart, .circle, #more, #info, #accommodations, .rating, .bluestar, .graystar{
+    display: flex;
+}
+
+article, aside, footer{
+    background-color: #F2F2F2;
+}
+
+h1, h2{
+    font-size: large;
+    padding : 10px 0px;;
 }
 
 ul
@@ -18,23 +39,18 @@ a{
 /*****header*****/
 
 header{
-    display: flex;
     justify-content: space-between;
 }
 
-header .logo img{
+#logo img{
     width: 100px;
-}
-
-nav ul {
-    display: flex;
-    flex-direction: row;
 }
 
 nav li {
     box-sizing: border-box;
     width: 150px;
     padding: 20px;
+    margin: 5px;
 }
 
 nav li a:hover{
@@ -45,25 +61,114 @@ nav li a:hover{
 
 /*****search*****/
 
-.searchbar {
-    display: flex;
-    flex-direction: row;
+#searchbar {
     flex-wrap: wrap;
 }
 
-.filters{
-    display:flex;
-    flex-direction: row;
+#location {
+    background-color: #F2F2F2;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px 0px 0px 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    height: 30px;
+    border: #F2F2F2;
+}
+
+::placeholder{
+    color: black;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    width: 150px;
+    padding : 10px;
+}
+
+button{
+    background-color: #0065FC;
+    border: none;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    height: 25px;
+    width: 100px;
+    font-family: 'Raleway', sans-serif;
+    border-radius: 0px 8px 8px 0px;
+}
+
+/*****filters*****/
+
+#filters{
     flex-wrap : wrap;
+    justify-content: left;
+    align-items: center;
+}
+
+#filterTitle{
+    font-weight: bold;
 }
 
 .cart{
-    display: flex;
-    flex-direction: row;
+    margin: 10px;
+    border-style: solid;
+    border-color: #F2F2F2;
+    border-radius: 0px 25px 25px 0px;
+    border-left: none;
+    justify-content: center;
+    align-items: center;
 }
 
+.circle{
+    color: #0065FC;
+    width: 50px;
+    height: 50px;
+    background-color: #DEEBFF;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+#filters p{
+    padding: 10px; 
+}
+
+#more{
+    flex-wrap : wrap;
+    justify-content: left;
+    align-items: center;
+}
+
+#info{
+    background-color: white;
+    color: #0065FC;
+    border-style: solid;
+    border-color: #F2F2F2;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
 
 /*****accommodations*****/
+
+#accommodations{
+    flex-wrap: wrap;
+}
+.card{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: white;
+    font-size: 75%;
+
+}
 
 .bluestar{
     color: #0065FC;
