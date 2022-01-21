@@ -13,7 +13,7 @@ body{
     max-width: 952px;
 }
 
-header, nav ul, #searchbar, #location, #filters, #filterList, .cart, .circle, #more, #info, #accommodations, .rating, .bluestar, .graystar{
+header, nav ul, #searchbar, #location, #filters, #filterList, .cart, .circle, #more, #info, #accommodations, article, .flex-container, .rating, .bluestar, .graystar, #activities, footer{
     display: flex;
 }
 
@@ -21,9 +21,13 @@ article, aside, footer{
     background-color: #F2F2F2;
 }
 
-h1, h2{
+h1{
     font-size: large;
     padding : 10px 0px;;
+}
+
+h2{
+    font-size: large;
 }
 
 ul
@@ -115,6 +119,7 @@ button{
     margin: 10px;
     border-style: solid;
     border-color: #F2F2F2;
+    border-width: 1px;
     border-radius: 0px 25px 25px 0px;
     border-left: none;
     justify-content: center;
@@ -156,19 +161,70 @@ button{
 /*****accommodations*****/
 
 #accommodations{
-    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: auto;
+    width:auto;
 }
-.card{
-    width: 200px;
-    height: 200px;
-    margin: 10px;
-    background-color: white;
+
+article{
+    flex-flow: column;
+    margin-right: 20px;
     border-radius: 10px;
-    border-style: solid;
-    border-color: white;
-    font-size: 75%;
+    flex-basis: 60%;
+    height:auto;
+    padding: 20px;
 
 }
+
+aside{
+    flex-flow: column;
+    border-radius: 10px;
+    flex-basis: 30%;
+    height:auto;
+    padding: 20px;
+}
+
+.flex-container{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height:auto;
+}
+
+.card{
+    width:30%;
+    margin: 10px;
+    background-color: white;
+    border-color: white;
+    font-size: 75%;
+    height:auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+}
+
+article .card, aside .card{
+    flex-wrap: wrap;
+    border-radius: 10px;
+    border-style: solid;
+}
+
+.card img{
+    max-width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.card figcaption{
+    padding: 5px;
+}
+
+article .card img{
+    max-height: 60%;
+}
+
+aside .card{
+    align-items: row;
+}
+
 
 .bluestar{
     color: #0065FC;
@@ -176,4 +232,28 @@ button{
 
 .graystar{
     color: #F2F2F2;
+}
+
+/****activities****/
+
+#activities{
+    flex-flow: column;
+    align-content: flex-end;
+}
+
+#activities .flex-container{
+    align-content:center;
+}
+
+#activities .flex-container .card{
+    border-radius: 10px;
+}
+
+/*****footer*****/
+
+footer{
+    justify-content: space-around;
+    width: auto;
+    height: auto;
+    margin-bottom: 20px;;
 }
