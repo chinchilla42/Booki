@@ -242,7 +242,8 @@ aside .card{
 }
 
 #activities .flex-container{
-    align-content:center;
+    align-content:space-around;
+    flex-wrap: wrap;
 }
 
 #activities .flex-container .card{
@@ -255,5 +256,5 @@ footer{
     justify-content: space-around;
     width: auto;
     height: auto;
-    margin-bottom: 20px;;
+    margin-bottom: 20px;
 }
