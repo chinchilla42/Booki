@@ -187,8 +187,16 @@ aside{
 .flex-container{
     flex-wrap: wrap;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: stretch;
     height:auto;
+}
+
+article .flex-container{
+
+}
+
+aside .flex-container{
+    flex-direction: column;
 }
 
 .card{
@@ -206,10 +214,12 @@ article .card, aside .card{
     flex-wrap: wrap;
     border-radius: 10px;
     border-style: solid;
+
 }
 
 .card img{
-    max-width: 100%;
+    max-width: auto;
+    height: auto;
     border-radius: 10px 10px 0px 0px;
 }
 
@@ -239,6 +249,7 @@ aside .card{
 #activities{
     flex-flow: column;
     align-content: flex-end;
+    align-items: stretch;
 }
 
 #activities .flex-container{
