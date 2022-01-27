@@ -1,16 +1,17 @@
 /******general******/
 *{
     margin: 0px;
-    padding: 0;
+    padding: 0px;
 }
 
 body{
     font-family: 'Raleway', sans-serif;
+    color:#222121
 }
 
 #container{
     margin: auto;
-    max-width: 952px;
+    min-width: 992px;
 }
 
 header, nav ul, #searchbar, #location, #filters, #filterList, .cart, .circle, #more, #info, #accommodations, article, .flex-container, .rating, .bluestar, .graystar, #activities, footer{
@@ -21,12 +22,7 @@ article, aside, footer{
     background-color: #F2F2F2;
 }
 
-h1{
-    font-size: large;
-    padding : 10px 0px;;
-}
-
-h2{
+h1, h2{
     font-size: large;
 }
 
@@ -40,11 +36,13 @@ a{
     color: inherit;
 }
 
+header, main{
+    justify-content: space-between;
+    margin: 0px 20px 0px 20px;
+}
+
 /*****header*****/
 
-header{
-    justify-content: space-between;
-}
 
 #logo img{
     width: 100px;
@@ -111,17 +109,14 @@ button{
     align-items: center;
 }
 
-#filterTitle{
+#filterTitle{ /****delete and use p***/
     font-weight: bold;
 }
 
 .cart{
     margin: 10px;
-    border-style: solid;
-    border-color: #F2F2F2;
-    border-width: 1px;
-    border-radius: 0px 25px 25px 0px;
-    border-left: none;
+    border: 2px solid #F2F2F2;
+    border-radius: 25px;
     justify-content: center;
     align-items: center;
 }
@@ -134,10 +129,13 @@ button{
     border-radius: 50%;
     justify-content: center;
     align-items: center;
+    margin-left: -2px;
+
 }
 
 #filters p{
     padding: 10px; 
+    font-weight: bold;
 }
 
 #more{
@@ -191,13 +189,19 @@ aside{
     height:auto;
 }
 
-article .flex-container{
-
-}
-
 aside .flex-container{
     flex-direction: column;
 }
+
+aside .flex-container .card{
+    display: flex;
+}
+
+aside .flex-container .card .figure{
+    flex-wrap: flex;
+}
+
+
 
 .card{
     width:30%;
@@ -217,23 +221,17 @@ article .card, aside .card{
 
 }
 
-.card img{
+.card figure img{
+    object-fit: cover;
     max-width: auto;
-    height: auto;
+    height: 100px;
     border-radius: 10px 10px 0px 0px;
 }
 
 .card figcaption{
-    padding: 5px;
+    padding: 10px;
 }
 
-article .card img{
-    max-height: 60%;
-}
-
-aside .card{
-    align-items: row;
-}
 
 
 .bluestar{
@@ -264,7 +262,8 @@ aside .card{
 /*****footer*****/
 
 footer{
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0px 20px 0px 20px;
     width: auto;
     height: auto;
 }
