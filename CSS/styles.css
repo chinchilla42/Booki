@@ -6,6 +6,7 @@
 
 body{
     font-family: 'Raleway', sans-serif;
+    font-size:medium;
     color:#222121
 }
 
@@ -14,7 +15,7 @@ body{
     min-width: 992px;
 }
 
-header, nav ul, #searchbar, #location, #filters, #filterList, .cart, .circle, #more, #info, #accommodations, article, .flex-container, .rating, .bluestar, .graystar, #activities, footer{
+header, nav ul, #searchbar, #location, #filters, #filterList, .cart, .circle, #more, #info, #accommodations, article, .flex-container, figure, .bluestar, .graystar, aside h2, #activities, footer{
     display: flex;
 }
 
@@ -23,7 +24,7 @@ article, aside, footer{
 }
 
 h1, h2{
-    font-size: large;
+    margin: 10px 0 10px 0;
 }
 
 ul
@@ -38,67 +39,99 @@ a{
 
 header, main{
     justify-content: space-between;
-    margin: 0px 20px 0px 20px;
+    margin: 0px 30px 0px 30px;
+}
+
+figure{
+    margin: 10px;
+    background-color: white;
+    border-color: white;
+    font-size: 75%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    height: auto;
+}
+
+figure img{
+    object-fit: cover;
+    max-width: auto;
+    height: 100px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+figure figcaption{
+    padding: 10px;
 }
 
 /*****header*****/
 
+#logo{
+    padding: 30px 0 0 10px;
+}
 
 #logo img{
-    width: 100px;
+    height: 50px;
 }
 
-nav li {
-    box-sizing: border-box;
-    width: 150px;
-    padding: 20px;
-    margin: 5px;
+nav ul li{
+    width: auto;
+    border-top: 2px solid white;
+    text-align: center;
+    padding: 30px;
 }
 
-nav li a:hover{
+nav ul li:hover{
     color:#0065FC;
-    padding-top: 20px;
     border-top: 2px solid #0065FC;
 }
 
 /*****search*****/
 
+#search p{
+    padding: 5px 0 20px 0;
+}
+
 #searchbar {
     flex-wrap: wrap;
+    padding-bottom: 20px;;
 }
 
 #location {
     background-color: #F2F2F2;
-    width: 30px;
-    height: 30px;
-    border-radius: 8px 0px 0px 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 15px 0px 0px 15px;
+    border: 1px solid #F2F2F2;
+
     justify-content: center;
     align-items: center;
 }
 
 input{
-    height: 30px;
-    border: #F2F2F2;
+    height: 40px;
+    border: 1px solid #F2F2F2;
 }
 
 ::placeholder{
     color: black;
     font-weight: bold;
     font-family: 'Raleway', sans-serif;
-    width: 150px;
+    width: auto;
     padding : 10px;
 }
 
 button{
     background-color: #0065FC;
-    border: none;
     text-align: center;
     color: white;
     font-weight: bold;
-    height: 25px;
-    width: 100px;
+    height: 40px;
+    width: auto;
+    padding: 10px;
     font-family: 'Raleway', sans-serif;
-    border-radius: 0px 8px 8px 0px;
+    border-radius: 0px 15px 15px 0px;
+    border: 1px solid #0065FC;
+    margin: -5px;
+
 }
 
 /*****filters*****/
@@ -109,7 +142,8 @@ button{
     align-items: center;
 }
 
-#filterTitle{ /****delete and use p***/
+#filters p{
+    padding: 10px; 
     font-weight: bold;
 }
 
@@ -123,8 +157,8 @@ button{
 
 .circle{
     color: #0065FC;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-color: #DEEBFF;
     border-radius: 50%;
     justify-content: center;
@@ -133,27 +167,26 @@ button{
 
 }
 
-#filters p{
-    padding: 10px; 
-    font-weight: bold;
-}
+/*****more*****/
 
 #more{
     flex-wrap : wrap;
-    justify-content: left;
-    align-items: center;
 }
 
 #info{
     background-color: white;
     color: #0065FC;
-    border-style: solid;
-    border-color: #F2F2F2;
-    width: 20px;
-    height: 20px;
+    border: 1px solid #F2F2F2;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     justify-content: center;
     align-items: center;
+    font-size: small;
+}
+
+#more p{
+    margin-left: 10px;
 }
 
 /*****accommodations*****/
@@ -161,78 +194,70 @@ button{
 #accommodations{
     justify-content: flex-start;
     height: auto;
-    width:auto;
+    width: auto;
 }
+
+#accommodations h3, #accommodations p, #accommodations .bluestar {
+    padding: 3px;
+}
+
+/****article****/
 
 article{
     flex-flow: column;
     margin-right: 20px;
     border-radius: 10px;
-    flex-basis: 60%;
-    height:auto;
     padding: 20px;
-
+    float: right;
+    width : 70%;
 }
+
+article p a{
+    font-weight: bold;
+}
+
+article .flex-container{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height:auto;
+}
+
+article .flex-container figure{
+    flex-wrap: wrap;
+    border-radius: 10px;
+    border-style: solid;
+    width: 29%;
+}
+
+/****aside****/
 
 aside{
     flex-flow: column;
     border-radius: 10px;
-    flex-basis: 30%;
     height:auto;
     padding: 20px;
+    float: left;
 }
 
-.flex-container{
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: stretch;
-    height:auto;
+aside h2{
+    justify-content: space-between;
 }
 
 aside .flex-container{
     flex-direction: column;
+    align-content: stretch;
 }
 
-aside .flex-container .card{
-    display: flex;
-}
-
-aside .flex-container .card .figure{
-    flex-wrap: flex;
-}
-
-
-
-.card{
-    width:30%;
-    margin: 10px;
-    background-color: white;
-    border-color: white;
-    font-size: 75%;
-    height:auto;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-
-}
-
-article .card, aside .card{
-    flex-wrap: wrap;
+aside .flex-container figure{
     border-radius: 10px;
     border-style: solid;
-
 }
 
-.card figure img{
-    object-fit: cover;
-    max-width: auto;
-    height: 100px;
-    border-radius: 10px 10px 0px 0px;
+aside .flex-container figure img{
+    max-width: 150px;
+    max-height: auto;
+    border-radius: 10px 0px 0px 10px;
 }
-
-.card figcaption{
-    padding: 10px;
-}
-
-
 
 .bluestar{
     color: #0065FC;
@@ -246,24 +271,25 @@ article .card, aside .card{
 
 #activities{
     flex-flow: column;
-    align-content: flex-end;
-    align-items: stretch;
 }
 
 #activities .flex-container{
-    align-content:flex-start;
-    flex-wrap: wrap;
+    flex-wrap: no-wrap;
+    justify-content: space-evenly;
 }
 
-#activities .flex-container .card{
+
+#activities .flex-container figure{
+    flex-wrap: wrap;
     border-radius: 10px;
+    width: auto;
 }
 
 /*****footer*****/
 
 footer{
     justify-content: space-between;
-    padding: 0px 20px 0px 20px;
+    padding: 0px 30px 0px 30px;
     width: auto;
     height: auto;
 }
