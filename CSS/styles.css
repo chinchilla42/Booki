@@ -16,7 +16,7 @@ body{
     max-width: 1200px;
 }
 
-header, nav ul, #searchbar, #location, #filters, #filterList, .cart, .circle, #more, #info, #accommodations, article, .flex-container, figure, .bluestar, .graystar, aside h2, #activities, .columnA, .columnB, footer{
+header, nav ul, #searchbar, #location, #filters, #filterList, .cart, .circle, #more, #info, #accommodations, article, .flex-container, figure, .bluestar, .graystar, aside h2, #activities, .column, footer{
     display: flex;
 }
 
@@ -156,6 +156,10 @@ button{
     align-items: center;
 }
 
+.cart :hover{
+    background-color: #DEEBFF;
+}
+
 .circle{
     color: #0065FC;
     width: 40px;
@@ -195,6 +199,7 @@ button{
     justify-content: flex-start;
     height: auto;
     width: auto;
+    margin-bottom: 20px;
 }
 
 #accommodations h3, #accommodations p, #accommodations .bluestar {
@@ -226,19 +231,25 @@ article p a{
 
 article .flex-container{
     flex-wrap: wrap;
-    justify-content: flex-start;
-    height:auto;
+    align-items: stretch;
+
 }
 
-article .flex-container figure{
-    flex-wrap: wrap;
+article figure{
+    flex-direction: column;
     border-radius: 10px;
     border-style: solid;
-    width: 29%;
+    width: 200px;
+    max-width: 250px;
+
 }
 
-article .flex-container figure img{
+article img{
     height: 100px;
+}
+
+article figcaption{
+    height: 50px;
 }
 
 /****aside****/
@@ -257,45 +268,70 @@ aside h2{
 
 aside .flex-container{
     flex-direction: column;
+    align-items: stretch;
+
 }
 
 aside figure{
     border-radius: 10px;
     border-style: solid;
-    height: 29%;
+    width: 250px;
+    height: 120px;
 }
 
 aside figure img{
-    max-width: 150px;
-    max-height: 150px;
+    max-width: 100px;
+    height: 120px;
     border-radius: 10px 0px 0px 10px;
+}
+
+aside figure figcaption{
+    width: 150px;
 }
 
 /****activities****/
 
 #activities{
     flex-flow: column;
+    margin-bottom: 20px;
 }
 
 #activities .flex-container{
-}
-
-.columnA{
-}
-
-.columnB{
-    flex-direction: column;
-    justify-content: space-between
+    flex-wrap: wrap;
 }
 
 #activities figure{
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 265px;
     border-radius: 10px;
-
 }
 
+#activities figcaption{
+    height: 20px;
+}
 
+#activities .large{
+    height: 500px;
+}
 
+#activities .large img{
+    height: 480px;
+}
+
+#activities .column{
+    flex-direction: column;
+    align-content: center;
+    height: 480px;
+}
+
+#activities .column figure{
+    height: auto;
+}
+
+#activities .column figure img{
+    height: 200px;
+}
 
 /*****footer*****/
 
@@ -304,6 +340,10 @@ footer{
     padding: 0px 30px 0px 30px;
     width: auto;
     height: auto;
+}
+
+footer h2{
+    padding:0px;
 }
 
 footer .category{
