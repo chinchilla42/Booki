@@ -16,7 +16,7 @@ body{
     max-width: 1200px;
 }
 
-header, nav ul, #searchbar, #location, #filters, #filterList, .cart, .circle, #more, #info, #accommodations, article, .flex-container, figure, .bluestar, .graystar, aside h2, #activities, .column, footer{
+header, nav ul, nav ul li, #searchbar, #location, #filters, #filterList, .cart, .circle, #more, #info, #accommodations, article, .flex-container, figure, .bluestar, .graystar, aside h2, #activities, .column, footer{
     display: flex;
 }
 
@@ -132,7 +132,10 @@ button{
     border-radius: 0px 15px 15px 0px;
     border: 1px solid #0065FC;
     margin: -5px;
+}
 
+#icon{
+    visibility: hidden;
 }
 
 /*****filters*****/
@@ -141,6 +144,10 @@ button{
     flex-wrap : wrap;
     justify-content: left;
     align-items: center;
+}
+
+#filterList{
+    flex-wrap: wrap;
 }
 
 #filters p{
@@ -342,8 +349,9 @@ footer{
     height: auto;
 }
 
-footer h2{
+footer p{
     padding:0px;
+    font-weight: bold;
 }
 
 footer .category{
@@ -357,4 +365,103 @@ footer .category h2{
 
 footer .category li{
     margin-top: 10px;
+}
+
+/*****************responsive************************/
+
+/*****tablets*****/
+@media (max-width: 991px) {
+    #container{
+        max-width: 991px;
+    }
+    
+    #accommodations{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-items: flex-start;
+    }
+}
+
+
+/*****smartphones*****/
+
+@media (max-width: 767px) {
+    body{
+        font-size: small;
+        text-align: center;
+    }
+    #container{
+        max-width: 767px;
+        min-width: 300px;
+        text-align: left;
+    }
+    header, main{
+        margin: 10px;
+    }
+    header{
+        flex-direction: column;
+        text-align: center;
+
+    }
+    #logo{
+        padding: 0;
+    }
+
+    /*to do : centrer menu nav*/
+
+    nav ul li{
+        display: flex;
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+    nav ul li:hover{
+        color:#0065FC;
+        border: none;
+        border-bottom: 2px solid #0065FC;
+    }
+
+    /*to do: loupe dans bouton de recherche*/
+
+    #text{
+        visibility: hidden;
+    }
+
+    #filters{
+        flex-direction: column;
+    }
+    #filters p{
+        /*to do : aligner "filtres" à gauche*/
+    }
+    #filterList{
+        flex-wrap: wrap;
+    }
+
+    /*to do : i et texte sur la même ligne*/
+    #info{
+        flex-wrap: wrap;
+    }
+    #accommodations{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    aside{
+        margin: 10px;
+    }
+    article{
+        background-color: inherit;
+        justify-items: center;
+    }
+    /*to do: centrer et élargir figures dans hébergements*/
+
+    #activities img{
+        height: 100px;
+    }
+
+    /*to do revoir taille des images : taille // hôtels*/
+
+    footer{
+        flex-direction: column;
+        padding: 5px;
+    }
+
 }
