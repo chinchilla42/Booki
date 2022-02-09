@@ -16,7 +16,7 @@ body{
     max-width: 1200px;
 }
 
-header, nav ul, nav ul li, #searchbar, #location, #filters, #filterList, .cart, .circle, #more, #info, #accommodations, article, .flex-container, figure, .bluestar, .graystar, aside h2, #activities, .column, footer{
+header, nav ul, nav ul li, a, #searchbar, #location, #filters, #filterList, .cart, .circle, #more, #info, #accommodations, article, .flex-container, figure, .bluestar, .graystar, aside h2, #activities, .column, footer{
     display: flex;
 }
 
@@ -134,8 +134,8 @@ button{
     margin: -5px;
 }
 
-#icon{
-    visibility: hidden;
+.icon{
+    display: none;
 }
 
 /*****filters*****/
@@ -162,7 +162,7 @@ button{
     justify-content: center;
     align-items: center;
 }
-
+/*revoir effet filtres*/
 .cart :hover{
     background-color: #DEEBFF;
 }
@@ -401,18 +401,20 @@ footer .category li{
     header{
         flex-direction: column;
         text-align: center;
-
     }
     #logo{
         padding: 0;
     }
 
-    /*to do : centrer menu nav*/
-
+    nav ul{
+        width: 100%;
+    }
     nav ul li{
         display: flex;
-        padding: 10px;
         flex-wrap: wrap;
+        width: 50%;
+        border-bottom : 2px solid #F2F2F2;
+    
     }
     nav ul li:hover{
         color:#0065FC;
@@ -422,23 +424,33 @@ footer .category li{
 
     /*to do: loupe dans bouton de recherche*/
 
-    #text{
-        visibility: hidden;
+    #search{
+        margin-left:15px;
+    }
+    #searchbar{
+        justify-content: center;
     }
 
-    #filters{
-        flex-direction: column;
+    input{
+        width:80%;
     }
-    #filters p{
-        /*to do : aligner "filtres" à gauche*/
+    #text{
+        display: none;
     }
+    button{
+        border-radius: 15px;
+        width: 40px;
+        margin-left: -10px;
+    }
+
     #filterList{
         flex-wrap: wrap;
     }
 
-    /*to do : i et texte sur la même ligne*/
-    #info{
-        flex-wrap: wrap;
+    #more{
+        flex-wrap: nowrap;
+        align-items: baseline;
+        padding-left: 10px;
     }
     #accommodations{
         display: flex;
@@ -450,14 +462,54 @@ footer .category li{
     article{
         background-color: inherit;
         justify-items: center;
-    }
-    /*to do: centrer et élargir figures dans hébergements*/
-
-    #activities img{
-        height: 100px;
+        margin: 0px;
+        width: inherit;
     }
 
-    /*to do revoir taille des images : taille // hôtels*/
+        /*to do: élargir figures dans hébergements*/
+
+    article .flex-container{
+        justify-content: center;
+    }
+    article img{
+        height: 120px;
+    }
+    article .figure{
+        width: 265px;
+        max-width: 300px;
+    }
+ 
+    #activities .flex-container{
+        justify-content: center;
+    }
+    #activities figure{
+        text-align: center;
+        justify-content: center;
+    }
+    #activities h2{
+        margin-left: 20px;
+    }
+
+    #activities .column{
+
+        height: 350px;
+    }
+
+    #activities .column a figure{
+        height: 150px;
+    }
+
+    #activities .column a figure img{
+        height: 120px;
+    }
+
+    #activities .large{
+        height: 150px;
+    }
+    
+    #activities .large img{
+        height: 120px;
+    }
 
     footer{
         flex-direction: column;
