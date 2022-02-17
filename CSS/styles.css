@@ -60,7 +60,7 @@ figure img{
     height: auto;
 }
 figure figcaption{
-    padding: 10px;
+    padding: 5px;
 }
 
 /*****header*****/
@@ -176,8 +176,9 @@ button{
 
 /*****accommodations*****/
 #accommodations{
-    justify-content: flex-start;
+    justify-content: space-around;
     margin-bottom: 20px;
+    width: 100%;
 }
 #accommodations h3, #accommodations p, #accommodations .bluestar {
     padding: 3px;
@@ -192,10 +193,8 @@ button{
 /****article****/
 article{
     flex-flow: column;
-    margin-right: 20px;
     border-radius: 10px;
     padding: 20px;
-    float: right;
 }
 article p a{
     font-weight: bold;
@@ -203,19 +202,20 @@ article p a{
 }
 article .flex-container{
     align-items: stretch;
-    justify-content: space-around;
+    justify-content:stretch;
 }
 article figure{
     flex-direction: column;
     border-radius: 10px;
     border-style: solid;
-    width: 200px;
+    width: 180px;
     max-width: 250px;
 }
 article img{
-    height: 100px;
+    height: 85px;
 }
 article figcaption{
+    font-size: smaller;
     height: 50px;
 }
 
@@ -224,27 +224,26 @@ aside{
     flex-flow: column;
     border-radius: 10px;
     padding: 20px;
-    width: 600px
+    margin-left: 25px;
+    max-width: 350px;
+
 }
 aside h2{
     justify-content: space-between;
 }
 aside .flex-container{
     flex-wrap: wrap;    
-    align-items: stretch;
-    justify-content: space-between;
+    justify-content: stretch;
 }
 aside figure{
     border-radius: 10px;
     border-style: solid;
-    max-width: 300px;
-    width: 250px;
-    height: 120px;
+    width: 300px;
+    height: 100px;
 }
 aside figure img{
     border-radius: 10px 0px 0px 10px;
     max-width: 100px;
-    height: 120px;
 }
 
 /****activities****/
@@ -312,7 +311,10 @@ footer .category li{
         width:100%;
     }
     header, main{
-        margin: 0;
+        margin: 0px;
+    }
+    #search{
+        margin: 20px;
     }
     #accommodations{
         flex-wrap: wrap;
@@ -326,7 +328,9 @@ footer .category li{
         width:500px;
     }
     aside{
-        width: inherit;
+        max-width: 100%;
+        margin-left: 0;
+        border-radius: 0;
     }
     aside .flex-container{
         justify-content: space-around;
@@ -367,10 +371,16 @@ footer .category li{
     #container{
         max-width: 767px;
         min-width: 300px;
+        width:100%;
+        text-align: left;
     }
     header{
         flex-direction: column;
         text-align: center;
+    }
+    h2{
+        padding: 10;
+        text-align: left;
     }
     #logo{
         padding: 0;
@@ -387,6 +397,9 @@ footer .category li{
         color:#0065FC;
         border: none;
         border-bottom: 2px solid #0065FC;
+    }
+    #search{
+        margin : 8px;
     }
     #searchbar{
         text-align: center;
@@ -406,6 +419,9 @@ footer .category li{
         width: auto;
         margin-left: -10px;
     }
+    button{
+        border-radius: 20%;
+    }
     #more{
         align-items: baseline;
         padding-left: 10px;
@@ -417,23 +433,26 @@ footer .category li{
         margin: 0;
         justify-items: center;
         width:100%;
-
+        padding: 0;
     }
     article{
         background-color: inherit;
         justify-items: center;
         margin: 0px;
+        padding: 0;
     }
     article .flex-container{
         justify-content: center;
     }
     article img{
         height: 120px;
+        width: 100%;
     }
     article .figure{
-        width: 265px;
-        max-width: 300px;
+        width: 100%;
+        max-width: 100%;
     } 
+
     footer{
         text-align: left;
         flex-direction: column;
