@@ -24,6 +24,7 @@ nav ul li, footer{
 header, main{
     justify-content: space-between;
     margin: 0px 30px 0px 30px;
+    width: 100%;
 }
 article, aside, footer{
     background-color: #F2F2F2;
@@ -63,6 +64,7 @@ figure figcaption{
 }
 
 /*****header*****/
+
 #logo{
     padding: 30px 0 0 0;
 }
@@ -281,7 +283,7 @@ aside figure img{
 footer{
     justify-content: space-between;
     padding: 0px 30px 0px 30px;
-    width: auto;
+    width: 100%;
     height: auto;
 }
 footer p{
@@ -433,6 +435,7 @@ footer .category li{
         max-width: 300px;
     } 
     footer{
+        text-align: left;
         flex-direction: column;
         padding: 5px;
     }
