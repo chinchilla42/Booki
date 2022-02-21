@@ -13,7 +13,7 @@ body{
     max-width: 1200px;
 }
 #container, header, nav ul, nav ul li, a, #searchbar, #location, #filters, #filterList, .cart, 
-.circle, #more, #info, #accommodations, article, .flex-container, figure, .bluestar, 
+.circle, #more, #info, #accommodations, article, .flex-container, figure, figcaption, .bluestar, 
 .graystar, aside h2, #activities, .column, footer{
     display: flex;
 }
@@ -36,8 +36,7 @@ h2{
     font-size: large;
     padding: 0 15px;
 }
-ul
-{
+ul{
     list-style-type: none;
 }
 a{
@@ -61,10 +60,10 @@ figure img{
 }
 figure figcaption{
     padding: 5px;
+    flex-direction: column;
 }
 
 /*****header*****/
-
 #logo{
     padding: 30px 0 0 0;
 }
@@ -170,6 +169,9 @@ button{
     align-items: center;
     font-size: small;
 }
+#more{
+    align-items: baseline;
+}
 #more p{
     margin-left: 10px;
 }
@@ -202,17 +204,19 @@ article p a{
 }
 article .flex-container{
     align-items: stretch;
-    justify-content:stretch;
+    justify-content:center;
 }
 article figure{
     flex-direction: column;
     border-radius: 10px;
     border-style: solid;
-    width: 180px;
+    width: 190px;
     max-width: 250px;
+    height: 160px;
+    margin : 15px;
 }
 article img{
-    height: 85px;
+    height: 100px;
 }
 article figcaption{
     font-size: smaller;
@@ -226,39 +230,49 @@ aside{
     padding: 20px;
     margin-left: 25px;
     max-width: 350px;
-
 }
 aside h2{
     justify-content: space-between;
+    padding-left : 0 20px 0 20px;
 }
 aside .flex-container{
     flex-wrap: wrap;    
-    justify-content: stretch;
+    justify-content: center;
 }
 aside figure{
     border-radius: 10px;
     border-style: solid;
     width: 300px;
-    height: 100px;
+    height: 120px;
+    margin: 15px;
 }
 aside figure img{
     border-radius: 10px 0px 0px 10px;
-    max-width: 100px;
+    max-width: 120px;
+}
+aside figcaption{
+    margin : 5px 10px;
+}
+aside .bluestar{
+    margin-top: 30px;
 }
 
 /****activities****/
 #activities{
     flex-flow: column;
-    margin-bottom: 20px;
+    margin: 40px 0 40px 0;
 }
 #activities figure{
     flex-direction: column;
     justify-content: space-around;
     width: 265px;
     border-radius: 10px;
+    padding: 0;
 }
 #activities figcaption{
-    height: 20px;
+    height: 30px;
+    justify-content: center;
+    margin-left: 10px;
 }
 #activities .large{
     height: 500px;
@@ -280,41 +294,38 @@ aside figure img{
 
 /*****footer*****/
 footer{
-    justify-content: space-between;
-    padding: 0px 30px 0px 30px;
+    padding: 0px 0px 0px 30px;
     width: 100%;
-    height: auto;
 }
 footer p{
     padding:0px;
     font-weight: bold;
 }
 footer .category{
-    padding: 10px;
-    margin: 10px;
+    padding: 40px 0 20px 0 ;
+    margin: 10px 150px 10px 10px;
 }
-footer .category h2{
-    padding-top: 10px;
+footer .category ul{
+    padding-top: 10px ;
 }
 footer .category li{
     margin-top: 10px;
 }
-
 /*******************************responsive***********************************/
 
 /*****tablets*****/
-@media (max-width: 991px) {
+@media (max-width:991px) and (min-width: 768px){
     #container{
         margin: 0;
         max-width: 991px;
         min-width: 768px;
         width:100%;
     }
-    header, main{
-        margin: 0px;
+    header{
+        margin: 10px;
     }
-    #search{
-        margin: 20px;
+    main{
+        margin: 0;
     }
     #accommodations{
         flex-wrap: wrap;
@@ -333,20 +344,22 @@ footer .category li{
         border-radius: 0;
     }
     aside .flex-container{
-        justify-content: space-around;
-    }
-    #activities .flex-container{
         justify-content: center;
     }
     #activities figure{
         text-align: center;
         justify-content: center;
+        width: 220px;
     }
     #activities h2{
         margin-left: 20px;
     }
+    #activities .flex-container{
+        justify-content: center;
+    }
     #activities .column{
-        height: 350px;
+        height: 180px;
+        flex-direction: row;
     }
     #activities a{
         height: 170px;
@@ -359,6 +372,9 @@ footer .category li{
     }
     #activities img{
         width: auto;
+    }
+    footer .category{
+        margin-right: 50px;
     }
 }
 
@@ -377,9 +393,13 @@ footer .category li{
     header{
         flex-direction: column;
         text-align: center;
+        margin: 0;
+    }
+    main{
+        margin: 0;
     }
     h2{
-        padding: 10;
+        padding: 0 20px;
         text-align: left;
     }
     #logo{
@@ -392,6 +412,7 @@ footer .category li{
         width: 50%;
         border-bottom : 2px solid #F2F2F2;
         justify-content: center;
+        padding-bottom: 10px ;
     }
     nav ul li:hover{
         color:#0065FC;
@@ -399,11 +420,7 @@ footer .category li{
         border-bottom: 2px solid #0065FC;
     }
     #search{
-        margin : 8px;
-    }
-    #searchbar{
-        text-align: center;
-        justify-content: center; 
+        margin : 25px 20px 0px 20px;
     }
     .fa-search{
         display: inline;
@@ -419,12 +436,23 @@ footer .category li{
         width: auto;
         margin-left: -10px;
     }
+    input{
+        width: 75%;
+        max-width: 250px;
+    }
     button{
-        border-radius: 20%;
+        border-radius: 25%;
+        width: 40px;
     }
     #more{
-        align-items: baseline;
         padding-left: 10px;
+    }
+    #more p{
+        padding-left: 10px;
+        width : 80%;
+    }
+    figure{
+        font-size: 90%;
     }
     #accommodations{
         flex-direction: column-reverse;
@@ -432,8 +460,15 @@ footer .category li{
     aside{
         margin: 0;
         justify-items: center;
-        width:100%;
-        padding: 0;
+        max-width: 100%;
+        width: 100%;
+        padding: 0 0 20px 0;
+    }
+    aside h2, article h2{
+        padding: 20px 35px 0;
+    }
+    article p a{
+        padding-left: 15px;
     }
     article{
         background-color: inherit;
@@ -445,17 +480,48 @@ footer .category li{
         justify-content: center;
     }
     article img{
-        height: 120px;
-        width: 100%;
+        height: 100px;
+        width: 350px;
     }
-    article .figure{
-        width: 100%;
+    article figure{
+        width: 300px;
         max-width: 100%;
+        margin: 10 0;
     } 
-
+    #activities{
+        margin: 20px 0;
+    }
+    #activities .flex-container{
+        justify-content: center;
+    }
+    #activities .column{
+        height: 350px;
+    }
+    #activities a{
+        height: 170px;
+    }
+    #activities .column a figure, #activities a .large{
+        height: 150px;
+    }
+    #activities .column a figure img, #activities a .large img{
+        height: 110px;
+    }
+    #activities img{
+        width: auto;
+    }
+    #activities figure{
+        width: 300px;
+        text-align: left;
+    }
     footer{
         text-align: left;
         flex-direction: column;
-        padding: 5px;
+        padding-left: 20px;
+    }
+    footer .category{
+        padding: 0;
+    }
+    footer ul{
+        padding: 0;
     }
 }
