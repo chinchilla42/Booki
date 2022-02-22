@@ -46,7 +46,6 @@ a{
 figure{
     margin: 10px;
     background-color: white;
-    border-color: white;
     font-size: 75%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     overflow: hidden;
@@ -121,6 +120,7 @@ button{
     border-radius: 0px 15px 15px 0px;
     border: 1px solid #0065FC;
     margin: -5px;
+    cursor: pointer;
 }
 .fa-search{
     display: none;
@@ -142,6 +142,7 @@ button{
     border-radius: 25px;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .cart:hover{
     background-color: #DEEBFF;
@@ -209,7 +210,7 @@ article .flex-container{
 article figure{
     flex-direction: column;
     border-radius: 10px;
-    border-style: solid;
+    border: solid white;
     width: 190px;
     max-width: 250px;
     height: 160px;
@@ -233,7 +234,7 @@ aside{
 }
 aside h2{
     justify-content: space-between;
-    padding-left : 0 20px 0 20px;
+    padding: 0 20px 0 20px;
 }
 aside .flex-container{
     flex-wrap: wrap;    
@@ -241,7 +242,7 @@ aside .flex-container{
 }
 aside figure{
     border-radius: 10px;
-    border-style: solid;
+    border: solid white;
     width: 300px;
     height: 120px;
     margin: 15px;
@@ -326,6 +327,12 @@ footer .category li{
     }
     main{
         margin: 0;
+    }
+    #logo{
+        padding-top: 15px;
+    }
+    #search{
+        margin-left : 15px;
     }
     #accommodations{
         flex-wrap: wrap;
@@ -486,7 +493,7 @@ footer .category li{
     article figure{
         width: 300px;
         max-width: 100%;
-        margin: 10 0;
+        margin: 10px 0;
     } 
     #activities{
         margin: 20px 0;
