@@ -53,7 +53,7 @@ figure{
 }
 figure img{
     object-fit: cover;
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 15px 15px 0px 0px;
     max-width: 100%;
     height: auto;
 }
@@ -196,12 +196,12 @@ button{
 /****article****/
 article{
     flex-flow: column;
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 20px;
 }
 article p a{
     font-weight: bold;
-    margin: 20px 0 0 20px;
+    margin: 25px 0 0 15px;
 }
 article .flex-container{
     align-items: stretch;
@@ -209,7 +209,7 @@ article .flex-container{
 }
 article figure{
     flex-direction: column;
-    border-radius: 10px;
+    border-radius: 15px;
     border: solid white;
     width: 190px;
     max-width: 250px;
@@ -241,14 +241,14 @@ aside .flex-container{
     justify-content: center;
 }
 aside figure{
-    border-radius: 10px;
+    border-radius: 15px;
     border: solid white;
     width: 300px;
     height: 120px;
     margin: 15px;
 }
 aside figure img{
-    border-radius: 10px 0px 0px 10px;
+    border-radius: 15px 0px 0px 15px;
     max-width: 120px;
 }
 aside figcaption{
@@ -266,31 +266,29 @@ aside .bluestar{
 #activities figure{
     flex-direction: column;
     justify-content: space-around;
-    width: 265px;
-    border-radius: 10px;
+    width: 245px;
+    border-radius: 15px;
     padding: 0;
+    margin: 18px;
 }
 #activities figcaption{
-    height: 30px;
+    height: 40px;
     justify-content: center;
     margin-left: 10px;
 }
 #activities .large{
-    height: 500px;
+    height: 400px;
 }
 #activities .large img{
-    height: 480px;
+    height: 350px;
 }
 #activities .column{
     flex-direction: column;
     align-content: center;
-    height: 480px;
-}
-#activities .column figure{
-    height: auto;
+    height: 400px;
 }
 #activities .column figure img{
-    height: 200px;
+    height: 130px;
 }
 
 /*****footer*****/
