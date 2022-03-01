@@ -54,7 +54,7 @@ figure{
 figure img{
     object-fit: cover;
     border-radius: 15px 15px 0px 0px;
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 figure figcaption{
@@ -276,19 +276,18 @@ aside .bluestar{
     justify-content: center;
     margin-left: 10px;
 }
-#activities .large{
-    height: 400px;
-}
-#activities .large img{
-    height: 350px;
-}
 #activities .column{
     flex-direction: column;
     align-content: center;
-    height: 400px;
 }
-#activities .column figure img{
-    height: 130px;
+a .large img{
+    height: 365px;
+}
+a .medium img{
+    height: 160px;
+}
+a .small img{
+    height: 120px;
 }
 
 /*****footer*****/
