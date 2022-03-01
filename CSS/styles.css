@@ -219,7 +219,7 @@ article figure{
 article img{
     height: 100px;
 }
-article figcaption{
+article figure figcaption{
     font-size: smaller;
     height: 50px;
 }
